@@ -5,11 +5,16 @@ include:
   #   snippet: zmk-usb-logging studio-rpc-usb-uart
   #   artifact-name: MKB_L_TB_Peripheral
 
+  # - board: xiao_ble//zmk
+  #   shield: MKB_R rgbled_adapter
+  #   # snippet: trackball studio-rpc-usb-uart
+  #   snippet: trackball
+  #   artifact-name: MKB_R
+
   - board: xiao_ble//zmk
     shield: MKB_R rgbled_adapter
-    # snippet: trackball studio-rpc-usb-uart
-    snippet: trackball
-    artifact-name: MKB_R
+    snippet: trackball3
+    artifact-name: MKB_R_3
 
   - board: xiao_ble//zmk
     shield: MKB_L rgbled_adapter
