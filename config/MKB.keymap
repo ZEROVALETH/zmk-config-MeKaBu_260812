@@ -221,7 +221,7 @@
         vol_alt_tab: volume-alt-tab {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&vol_alt_gui_n>, <&vol_alt_gui_p>;
+            bindings = <&vol_alt_gui_p>, <&vol_alt_gui_n>;
             tap-ms = <10>;
         };
 
