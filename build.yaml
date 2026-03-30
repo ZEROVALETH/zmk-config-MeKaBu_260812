@@ -84,6 +84,6 @@ include:
   #   snippet: zmk-usb-logging studio-rpc-usb-uart
   #   artifact-name: MKB_R_MODULE_KEY
 
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset
 
