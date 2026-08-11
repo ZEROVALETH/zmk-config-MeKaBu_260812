@@ -50,10 +50,83 @@
         };
     };
 
-    combos{
-    };
+    combos {
+        compatible = "zmk,combos";
 
+        twinTap_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <18 19>;
+        };
+    };
     behaviors {
+        td_copy: td_copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LC(C)>;
+            tapping-term-ms = <180>;
+        };
+
+        td_paste: td_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LC(V)>;
+            tapping-term-ms = <180>;
+        };
+
+        td_redo: td_redo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_REDO";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+            tapping-term-ms = <180>;
+        };
+
+        td_cuttingX: td_cuttingX {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CUTTINGX";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp LC(X)>;
+            tapping-term-ms = <180>;
+        };
+
+        Bold: Bold {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BOLD";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp LC(B)>;
+        };
+
+        VMUp: VMUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(RIGHT_ARROW))>;
+            label = "VMUP";
+        };
+
+        VMunder: VMunder {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LEFT_ARROW))>;
+            label = "VMUNDER";
+        };
+
+        TY53754: TY53754 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N7 &kp N5 &kp N4>;
+            label = "TY53754";
+            tap-ms = <150>;
+        };
+
+        word: word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N5 &kp N0 &kp N2 &kp H &kp A &kp S &kp I &kp LS(M)>;
+            label = "word";
+        };
+        
         msch: msc-hold {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
