@@ -328,9 +328,8 @@
                     &kp TAB         &kp LGUI      &kp CAPS             &Ctrl_changLayer  &kp LEFT_ALT      &lt FCN ENTER   &kp SPACE             &kp ESCAPE  &kp DELETE      &kp BACKSPACE
                     &kp LEFT        &kp UP        &to NAVNUM &kp DOWN  &kp RIGHT                                           &mo SYMBOL  &VMUp      &td_redo    &VMunder        &kp JP_ZKHK
                                                             &kp A                                                                     &kp B
-                >;
-
-                sensor-bindings = <&vol_alt_tab>;
+            >;
+            sensor-bindings = <&vol_alt_tab>;
         };
 		
 		symbol_layer {
@@ -347,31 +346,30 @@
 		};
 		
         navnum_layer {
-                label = "Nav/Num";
-                bindings = <
-                    &kp CAPS          &kp JP_DQT    &kp N7  &kp N8    &kp N9     &kp JP_UNDER     &trans        &kp JP_YEN    &trans       &trans         &trans     &trans
-                    &kp JP_LBKT       &trans        &kp N4  &kp N5    &kp N6     &kp JP_COLON     &kp JP_UNDER  &kp JP_EQUAL  &kp JP_RBKT  &kp JP_BSLH    &trans     &trans
-                    &mt LSHFT PERIOD  &kp N0        &kp N1  &kp N2    &kp N3     &kp JP_MINUS     &trans        &kp JP_SLASH  &kp JP_SEMI  &kp JP_SQT     &trans     &trans
-                    &trans            &kp ENTER     &trans            &trans     &trans            &trans        &trans                   &trans         &trans     &trans
-                    &kp LEFT          &kp UP        &to DEFAULT &kp DOWN  &kp RIGHT                                  &kp HOME     &kp PG_UP   &kp ENTER      &kp PG_DN  &kp END
-                                                                &kp B                                                             &kp B
-                >;
-
-                sensor-bindings = <&vol_alt_tab>;
+            label = "Nav/Num";
+            bindings = <
+                &kp CAPS          &kp JP_DQT    &kp N7  &kp N8    &kp N9     &kp JP_UNDER     &trans        &kp JP_YEN    &trans       &trans         &trans     &trans
+                &kp JP_LBKT       &trans        &kp N4  &kp N5    &kp N6     &kp JP_COLON     &kp JP_UNDER  &kp JP_EQUAL  &kp JP_RBKT  &kp JP_BSLH    &trans     &trans
+                &mt LSHFT PERIOD  &kp N0        &kp N1  &kp N2    &kp N3     &kp JP_MINUS     &trans        &kp JP_SLASH  &kp JP_SEMI  &kp JP_SQT     &trans     &trans
+                &trans            &kp ENTER     &trans            &trans     &trans            &trans        &trans                   &trans         &trans     &trans
+                &kp LEFT          &kp UP        &to DEFAULT &kp DOWN  &kp RIGHT                                  &kp HOME     &kp PG_UP   &kp ENTER      &kp PG_DN  &kp END
+                                                            &kp B                                                             &kp B
+            >;
+            sensor-bindings = <&vol_alt_tab>;
         };
 		
-		function_layer {
-			label="Fcn";
-			bindings = <
-&kp F1 &trans &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &kp F12
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans
-&trans &trans &trans        &trans &trans &trans &trans        &trans &trans  &trans
-&mb4_alt_gui_n  &msc MOVE_Y(120)   &kp PSCRN  &msc MOVE_Y(-120)   &mb5_alt_gui_p            &kp LEFT    &kp UP          &kp C_MUTE  &kp DOWN   &kp RIGHT
-&kp HOME &kp END
-			>;
+        function_layer {
+            label = "Fcn";
+            bindings = <
+                &trans    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5         &kp F5          &kp UP_ARROW    &kp LS(N8)       &kp LPAR   &trans           &trans
+                &trans    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &kp EXCLAMATION  &kp QMARK
+                &trans    &trans  &kp F11   &trans    &trans     &trans         &kp F7          &kp F9          &kp F10          &trans     &trans           &trans
+                &trans    &trans  &kp LALT            &kp ENTER  &kp ENTER      &kp ENTER       &kp ENTER                        &trans     &trans           &trans
+                &kp LEFT  &kp UP  &to DEFAULT &kp DOWN  &kp RIGHT                                 &kp HOME        &kp PG_UP        &kp ENTER  &kp PG_DN        &kp END
+                                            &kp A                                                               &kp B
+            >;
             sensor-bindings = <&mouse_scrl>;
-		};
+        };
 		
 		device_layer {
 			label="Device";
