@@ -1,0 +1,3 @@
+name: trackball_receiver
+append:
+  EXTRA_DTC_OVERLAY_FILE: trackball_receiver.overlay
