@@ -1,64 +1,64 @@
 layout: {zmk_keyboard: MKB}
 layers:
   Def:
-  - {t: TAB, h: Fcn}
-  - {t: Q, h: Fcn}
+  - LEFT SHIFT
   - W
   - E
   - R
   - T
+  - Q
   - Y
   - U
   - I
   - O
-  - P
-  - {t: MINUS, s: Sft+INT1}
-  - {t: RET, h: LCTRL}
+  - LEFT SHIFT
+  - {t: MINUS, h: Mouse}
   - A
   - S
   - D
   - F
   - G
+  - ESCAPE
   - H
   - J
   - K
   - L
-  - {t: SEMI, s: SQT}
-  - {t: Sft+7, s: Sft+2}
-  - {t: ESC, h: LSHIFT}
+  - '&colonSemi'
+  - P
   - Z
-  - X
-  - C
-  - V
-  - B
+  - '&td_cuttingX'
+  - '&td_copy'
+  - '&td_paste'
+  - '&Bold'
+  - '&td_redo'
   - N
   - M
   - COMMA
   - DOT
+  - Sft+INT1
   - SLASH
+  - TAB
   - LGUI
-  - ESC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: SPACE, h: Sym}
-  - {t: BSPC, h: Nav/Num}
-  - LALT
-  - {t: RET, h: LSHFT}
-  - {t: Mouse, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: Sym, h: toggle}
-  - {t: '&mkp MB4', s: '0'}
-  - '&msc MOVE_Y(120)'
-  - PSCRN
-  - '&msc MOVE_Y(-120)'
-  - {t: '&mkp MB5', s: '0'}
+  - CAPS
+  - '&Ctrl_changLayer'
+  - LEFT ALT
+  - {t: ENTER, h: Fcn}
+  - SPACE
+  - ESCAPE
+  - DELETE
+  - BACKSPACE
   - LEFT
   - UP
-  - MUTE
+  - {t: Nav/Num, h: toggle}
   - DOWN
   - RIGHT
-  - MUTE
-  - END
+  - Sym
+  - '&VMUp'
+  - '&td_redo'
+  - '&VMunder'
+  - GRAVE
+  - A
+  - B
   Sym:
   - Sft+EQUAL
   - Sft+1
@@ -99,7 +99,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Sft+RET
@@ -111,7 +111,7 @@ layers:
   - PSCRN
   - '&msc MOVE_Y(-120)'
   - {t: '&mkp MB5', s: '0'}
-  - LEFT
+  - {t: LEFT, type: held}
   - UP
   - MUTE
   - DOWN
@@ -119,123 +119,123 @@ layers:
   - HOME
   - END
   Nav/Num:
-  - CAPSLOCK
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
+  - CAPS
+  - Sft+2
   - '7'
   - '8'
   - '9'
+  - Sft+INT1
+  - {t: ▽, type: trans}
+  - INT3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RBKT
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - SQT
+  - Sft+INT1
+  - Sft+MINUS
+  - NUHS
+  - INT1
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: PERIOD, h: LSHFT}
   - '0'
+  - '1'
+  - '2'
+  - '3'
+  - MINUS
   - {t: ▽, type: trans}
-  - LCTRL
-  - Ctl+A
-  - LSHIFT
-  - '&mkp MCLK'
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - UP
+  - SLASH
+  - SEMI
+  - Sft+7
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
+  - UP
+  - {t: Def, h: toggle}
   - DOWN
   - RIGHT
-  - BSPC
-  - DEL
-  - LSHIFT
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+Y
+  - HOME
   - PG UP
+  - ENTER
   - PG DN
-  - HOME
   - END
-  - {t: ▽, type: trans}
-  - PSCRN
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '&mkp MB4', s: '0'}
-  - '&msc MOVE_Y(1200)'
-  - PSCRN
-  - '&msc MOVE_Y(-1200)'
-  - {t: '&mkp MB5', s: '0'}
-  - LEFT
-  - UP
-  - MUTE
-  - DOWN
-  - RIGHT
-  - HOME
-  - END
+  - B
+  - B
   Fcn:
-  - {t: F1, type: held}
   - {t: ▽, type: trans}
+  - F1
   - F2
   - F3
   - F4
   - F5
+  - F5
+  - UP ARROW
+  - Sft+8
+  - LPAR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F6
   - F7
   - F8
   - F9
   - F10
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - {t: ▽, type: trans}
+  - '!'
+  - QMARK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - F7
+  - F9
+  - F10
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LALT
+  - ENTER
+  - ENTER
+  - {t: ENTER, type: held}
+  - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '&mkp MB4', s: '0'}
-  - '&msc MOVE_Y(120)'
-  - PSCRN
-  - '&msc MOVE_Y(-120)'
-  - {t: '&mkp MB5', s: '0'}
   - LEFT
   - UP
-  - MUTE
+  - {t: Def, h: toggle}
   - DOWN
   - RIGHT
   - HOME
+  - PG UP
+  - ENTER
+  - PG DN
   - END
+  - A
+  - B
   Device:
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
@@ -276,8 +276,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -288,7 +288,7 @@ layers:
   - PSCRN
   - '&msc MOVE_Y(-120)'
   - {t: '&mkp MB5', s: '0'}
-  - LEFT
+  - {t: LEFT, type: held}
   - UP
   - MUTE
   - DOWN
@@ -304,24 +304,20 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB2'
+  - '&mkp MB3'
+  - '&mkp MB1'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp MCLK'
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - {t: ▽, type: trans}
-  - Sym
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - '&mkp MB2'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -341,16 +337,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
-  - {t: '&mkp MB4', s: '0'}
-  - '&msc MOVE_Y(120)'
-  - PSCRN
-  - '&msc MOVE_Y(-120)'
-  - {t: '&mkp MB5', s: '0'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - UP
-  - MUTE
+  - SPACE
   - DOWN
   - RIGHT
-  - HOME
+  - {t: Def, h: toggle}
+  - PG UP
+  - ENTER
+  - PG DN
   - END
+  - A
+  - B
+combos:
+- p: [18, 19]
+  k: TAB
