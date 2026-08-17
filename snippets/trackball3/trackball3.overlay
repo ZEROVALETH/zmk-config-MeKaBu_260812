@@ -60,7 +60,7 @@
 &split_peripheral {
     status = "okay";
     device = <&trackball3>;
-    input-processors = <&zip_xyz>;
+//    input-processors = <&zip_xyz>;
 };
 
 // &pointer {

@@ -7,5 +7,5 @@
 &listner_peripheral {
     status = "okay";
     device = <&split_peripheral>;
-    input-processors = <&zip_zxy>;
+//    input-processors = <&zip_zxy>;
 };
