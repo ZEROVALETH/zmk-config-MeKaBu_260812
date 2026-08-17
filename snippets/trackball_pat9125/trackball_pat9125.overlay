@@ -52,10 +52,10 @@
     status = "okay";
     device = <&trackball_r>;
 
-    input-processors
-        = <&zip_xy_to_scroll_mapper>
-        , <&zip_scroll_scaler 3 1>
-        ;
+//    input-processors
+//        = <&zip_xy_to_scroll_mapper>
+//        , <&zip_scroll_scaler 3 1>
+//        ;
 };
 
 /* 左PAW3222 → Split受信 → カーソル */
