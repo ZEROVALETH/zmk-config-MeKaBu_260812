@@ -1,0 +1,70 @@
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <input/processors/report_rate_limit.dtsi>
+#include <input/processors/xyz.dtsi>
+#include "../listners.dtsi"
+
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 13)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1 {
+    status = "okay";
+    compatible = "nordic,nrf-twim";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    trackball_r: trackball@79 {
+        status = "okay";
+        compatible = "pixart,pat9125";
+        reg = <0x79>;
+
+        motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+        res-x-cpi = <300>;
+        res-y-cpi = <300>;
+        report-interval-ms = <10>;
+
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
+
+        sleep1-enable;
+        sleep2-enable;
+    };
+};
+
+/* 右PAT9125 → スクロール */
+&listner_central {
+    status = "okay";
+    device = <&trackball_r>;
+
+    input-processors
+        = <&zip_xy_to_scroll_mapper>
+        , <&zip_scroll_scaler 3 1>
+        ;
+};
+
+/* 左PAW3222 → Split受信 → カーソル */
+&listner_peripheral {
+    status = "okay";
+    device = <&split_peripheral>;
+
+    input-processors
+        = <&zip_zxy>
+        , <&zip_report_rate_limit 8>
+        ;
+};
