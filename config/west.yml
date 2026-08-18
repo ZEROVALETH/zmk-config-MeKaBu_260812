@@ -16,8 +16,8 @@ manifest:
     #   url-base: https://github.com/4mplelab
     - name: BP
       url-base: https://github.com/taichan1113
-    # - name: mctechnology17
-    #   url-base: https://github.com/mctechnology17
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
     # - name: petejohanson
     #   url-base: https://github.com/petejohanson
     # - name: oleksandrmaslov
@@ -26,6 +26,7 @@ manifest:
     #   url-base: https://github.com/george-norton
     - name: sekigon-gonnoc  # <-- PAW3222
       url-base: https://github.com/sekigon-gonnoc
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -100,6 +101,8 @@ manifest:
     #   path: zmk-behavior-sensor-attr-cycle
     #   remote: badjeff
     #   revision: main
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
   self:
     path: config
-    
