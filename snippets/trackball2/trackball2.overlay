@@ -2,6 +2,7 @@
 #include <input/processors.dtsi>
 #include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/xyz.dtsi>
+#include <input/processors/zmk-input-processor-keybind.dtsi>
 #include "../pinctrl_i2c.dtsi"
 #include "../listners.dtsi"
 
@@ -33,7 +34,7 @@
 		res-y-cpi = <100>;
 		zephyr,axis-x = <INPUT_REL_X>;
 		zephyr,axis-y = <INPUT_REL_Y>;
-		// invert-x;
+		invert-x;
 		invert-y;
 		sleep1-enable;
 		sleep2-enable;
@@ -42,7 +43,7 @@
 
 &split_peripheral {
     device = <&trackball2>;
-	input-processors = <&zip_report_rate_limit 8>, <&zip_xyz>;
+    input-processors = <&zip_report_rate_limit 8>, <&zip_xyz>, <&zip_keybind_mouse>;
     // input-processors 
 	// 	= <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>
 	// 	, <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>
@@ -55,6 +56,21 @@
     //     , <&zip_xy_to_scroll_mapper>
     //     ;
     // };
+};
+
+/ {
+    zip_keybind_mouse: zip_keybind_mouse {
+        compatible = "zmk,input-processor-keybind";
+        #input-processor-cells = <0>;
+        bindings = <&mo MOUSE>, <&mo MOUSE>, <&mo MOUSE>, <&mo MOUSE>;
+        mode = <0>;
+        tap-ms = <180>;
+        wait-ms = <0>;
+        tick = <8>;
+        threshold = <1>;
+        max_threshold = <200>;
+        track_remainders = <false>;
+    };
 };
 
 // &pointer {

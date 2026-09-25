@@ -18,6 +18,8 @@ manifest:
       url-base: https://github.com/taichan1113
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: te9no
+      url-base: https://github.com/te9no
     # - name: petejohanson
     #   url-base: https://github.com/petejohanson
     # - name: oleksandrmaslov
@@ -104,5 +106,9 @@ manifest:
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: v0.3/dev
+
+    - name: zmk-input-processor-keybind
+      remote: te9no
+      revision: main
   self:
     path: config
