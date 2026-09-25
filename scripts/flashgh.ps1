@@ -1,7 +1,9 @@
 param(
     [Parameter(Mandatory=$false)]
     [ValidateSet('JOY', 'R')]
-    [string]$Side = 'JOY'
+    [string]$Side = 'R',
+    [Parameter(Mandatory=$false)]
+    [string]$Branch = 'scroll-working-test'
 )
 
 # --------------------------------------------
@@ -41,8 +43,8 @@ New-Item -ItemType Directory -Path $artifactsDownloadDir | Out-Null
 # --------------------------------------------
 # Fetch latest successful workflow run
 # --------------------------------------------
-Write-Host "Fetching latest successful workflow run for $repoOwner/$repoName (branch v0.2.1_RZT-keytoggle)..."
-$latestRunId = (gh run list --repo "$repoOwner/$repoName" --branch "v0.2.1_RZT-keytoggle" --json databaseId --limit 1 | ConvertFrom-Json).databaseId
+Write-Host "Fetching latest successful workflow run for $repoOwner/$repoName (branch $Branch)..."
+$latestRunId = (gh run list --repo "$repoOwner/$repoName" --branch $Branch --workflow build.yml --status success --json databaseId --limit 1 | ConvertFrom-Json).databaseId
 
 if (-not $latestRunId) {
     Write-Error "Failed to get the latest successful workflow run ID. Make sure 'gh' CLI is installed and authenticated, and the workflow/branch names are correct."
