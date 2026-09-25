@@ -59,6 +59,8 @@ Thrives in collaborative environments, particularly hackathons and technical con
 ### Current Keymap Configuration | 現在のキーマップ構成
 ![MeKaBu Keymap](keymap-drawer/MKB.svg)
 
+> GitHub Actions build verification run: 2026-09-25
+
 ## Etymology | 語源
 The name "MeKaBu" encompasses multiple meanings:
 - Mechanical Components (メカニカルな部品群)
