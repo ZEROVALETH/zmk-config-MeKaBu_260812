@@ -47,15 +47,10 @@
     };
 };
 
-/* 右PAT9125 → スクロール */
+/* 右PAT9125 → 通常のマウス移動 */
 &listner_central {
     status = "okay";
     device = <&trackball_r>;
-
-    input-processors
-        = <&zip_xy_to_scroll_mapper>
-        , <&zip_scroll_scaler 3 1>
-        ;
 };
 
 /* 左PAW3222 → Split受信 → カーソル */
