@@ -103,10 +103,6 @@ manifest:
     #   path: zmk-behavior-sensor-attr-cycle
     #   remote: badjeff
     #   revision: main
-    - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: v0.3/dev
-
     - name: zmk-input-processor-keybind
       remote: te9no
       revision: main
